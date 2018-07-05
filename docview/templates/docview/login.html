@@ -1,0 +1,14 @@
+{% extends "docview/base.html" %}
+{% block title %} docXman
+{% endblock %}
+{% block main %}
+{% if latest_doc_list %}
+	<ol>
+	{% for doc in latest_doc_list %}
+		<li>{{ pub_by.doc_name }}</li><br/>
+	{% endfor %}
+	</ol>
+{% else %}
+	<p>No document are available.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'docview/style.css' %}">
+<title>{% block title %}{% endblock %}</title>
+<style>
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+	background-color: #000000;
+}
+ol{
+	list-style-type: none;
+}
+li {
+    display: inline;
+	float: left;
+}
+div li a {
+    display: block;
+    padding: 8px;
+	color: white;
+	text-decoration: none;
+}
+div li a:hover {
+    background-color: red;
+}
+.active {
+    background-color: red;
+}
+
+</style>
+</head>
+<body>
+	<div>
+	<div>
+		<a href=""><img src={% static 'docview/images/logo.png' %} height=100px width=300px></a>
+	</div>
+	<div class="header">
+	
+	<ul>
+		<li><a class="active" href="">Home</a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+	</div>
+	<div>
+		<button>Logout</button>
+	</div>
+	</div><br><br>
+	<div><center>
+	{% block main %}
+	{% endblock %}</center>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

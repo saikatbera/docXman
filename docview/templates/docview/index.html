@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <head>
+	<title>docXman</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'docview/style.css' %}">
+	<style>
+	
+	font{
+		color: #FFFFFF;
+	}
+
+	div{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform : translate(-50%,-50%);
+	}
+	button{
+	float:none;
+	}
+	</style>
+    </head>
+    <body background={% static 'docview/images/background.jpg' %}>
+	<div>
+	<center>
+	<img src={% static 'docview/images/logo.png' %} height=100px width=300px><br><br><br><br><br><br>
+	<font size=7>A Document Management Website</font><br>
+	<p style="background: rgb(35,35,35); padding: 9px;"><font size=4>
+	The most simple way to implement a user sign up is by using the UserCreationForm as it is.<br><br><br> 
+	This strategy is suitable in case you are using the default Django user,<br><br>
+	using username to authenticate and is interested<br>
+	only in setting the username and password upon sign up.</font>
+	</p><br>
+	
+	<a href="main.html"><button><b><font size=5>Sign in</font></b></button></a><br><br>
+	<a href="signup.html"><font size=5>Sign up</font></a>&nbsp &nbsp &nbsp &nbsp &nbsp
+	<a href="main.html"><font size=5>Skip>></font></a><br><br>
+	</center>
+	</div>
+	</body>
+</html>
